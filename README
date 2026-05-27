@@ -1,0 +1,35 @@
+# Sistema de Geração de Leads - Google Maps
+
+Sistema desenvolvido para automatizar a coleta de informações comerciais através do Google Maps.
+
+A aplicação realiza buscas por empresas com base em palavras-chave e localização, extraindo dados relevantes para prospecção comercial e geração de leads.
+
+## Funcionalidades
+
+- Busca automatizada no Google Maps
+- Coleta de nome da empresa
+- Categoria/atividade da empresa
+- Website
+- Instagram
+- E-mail
+- Telefone
+- Endereço
+- CNPJ
+- Exportação dos dados
+- Interface web para gerenciamento das buscas
+
+## Objetivo
+
+O sistema foi criado para otimizar processos de prospecção comercial, facilitando a identificação de potenciais clientes de forma automatizada e organizada.
+
+## Tecnologias utilizadas
+
+- Python
+- Selenium
+- Flask
+- HTML/CSS
+- Google Maps Scraping
+
+## Observações
+
+O projeto utiliza automação web para coleta pública de informações disponíveis online.
