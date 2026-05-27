@@ -1,0 +1,19 @@
+nome,telefone,endereco,site,instagram,maps
+Hospital Veterinário Dra. Mariana (24H) - Creche e Hotel Pet,"
+(48) 3093-9464","
+Av. Pedra Branca, 339 - Pedra Branca, Palhoça - SC, 88137-270",,,"https://www.google.com/maps/place/Hospital+Veterin%C3%A1rio+Dra.+Mariana+(24H)+-+Creche+e+Hotel+Pet/@-27.6259531,-48.7125206,14z/data=!4m10!1m2!2m1!1sPET+sHOP+em+PALHO%C3%87A!3m6!1s0x9527357707b08efb:0xbfec02b570be8828!8m2!3d-27.6259531!4d-48.6764717!15sChRQRVQgc0hPUCBlbSBQQUxIT8OHQVoWIhRwZXQgc2hvcCBlbSBwYWxob8OnYZIBD2FuaW1hbF9ob3NwaXRhbJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VSdE5sOHllbUpCRUFF4AEA-gEECEcQFw!16s%2Fg%2F11g6yn1y38?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D"
+Clínica veterinária Palhocão,"
+(48) 99164-5507","
+R. Vinte e Quatro de Abril, 3080 - Centro, Palhoça - SC, 88131-030",,,"https://www.google.com/maps/place/Cl%C3%ADnica+veterin%C3%A1ria+Palhoc%C3%A3o/@-27.6259531,-48.7125206,14z/data=!4m10!1m2!2m1!1sPET+sHOP+em+PALHO%C3%87A!3m6!1s0x952735b25a8a2ae1:0x1da48ba4f40915d3!8m2!3d-27.6492456!4d-48.6672375!15sChRQRVQgc0hPUCBlbSBQQUxIT8OHQVoWIhRwZXQgc2hvcCBlbSBwYWxob8OnYZIBDXJlcHRpbGVfc3RvcmWaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMjFXVFZGclNsRmhSa1oxVDBWd1ZHRXpZekpXTW1oNVVqSlZNMVl3UlJBQuABAPoBBAgAEDw!16s%2Fg%2F1tptrsqk?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D"
+Pet Shop - Clube do Pet,"
+(48) 99986-4626","
+R. João Bernadino da Rosa - Palhoça, SC, 88137-010",https://www.instagram.com/meu.clubdopet?igsh=NjVhYjdoMDZicm5p&utm_source=qr,https://www.instagram.com/meu.clubdopet?igsh=NjVhYjdoMDZicm5p&utm_source=qr,"https://www.google.com/maps/place/Pet+Shop+-+Clube+do+Pet/@-27.6259531,-48.7125206,14z/data=!4m10!1m2!2m1!1sPET+sHOP+em+PALHO%C3%87A!3m6!1s0x952735f26818e7d3:0x411ae7fc5126dfb5!8m2!3d-27.6240211!4d-48.6892506!15sChRQRVQgc0hPUCBlbSBQQUxIT8OHQVoWIhRwZXQgc2hvcCBlbSBwYWxob8OnYZIBDXJlcHRpbGVfc3RvcmWaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMjVDTTFZeU5XdFJNRlpKVlc1S1NtVkZZekJpUlRsVVpGY3hURTlWUlJBQuABAPoBBAh9EC0!16s%2Fg%2F11yntsv6by?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D"
+Hospital Veterinário Palhoça - 24 horas,"
+(48) 99602-1669","
+R. Amaro Ferreira de Macedo, 50 - Centro, Palhoça - SC, 88130-280",https://hospitalveterinariopalhoca.com.br/,,"https://www.google.com/maps/place/Hospital+Veterin%C3%A1rio+Palho%C3%A7a+-+24+horas/@-27.6259531,-48.7125206,14z/data=!4m10!1m2!2m1!1sPET+sHOP+em+PALHO%C3%87A!3m6!1s0x952735af01b7eff7:0xcb4c640c295d8c3!8m2!3d-27.6468657!4d-48.6717256!15sChRQRVQgc0hPUCBlbSBQQUxIT8OHQVoWIhRwZXQgc2hvcCBlbSBwYWxob8OnYZIBD2FuaW1hbF9ob3NwaXRhbJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuVFVOSk5FeHlaa1ZCRUFF4AEA-gEECC4QLQ!16s%2Fg%2F1q66p51_g?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D"
+Planeta Pet,"
+(48) 3242-5974","
+R. Indaial, 219 - Jardim Coqueiros, Palhoça - SC, 88133-243",https://instagram.com/planetapetsc,https://instagram.com/planetapetsc,"https://www.google.com/maps/place/Planeta+Pet/@-27.6259531,-48.7125206,14z/data=!4m10!1m2!2m1!1sPET+sHOP+em+PALHO%C3%87A!3m6!1s0x95273599b1a1f701:0x51df894b746539d6!8m2!3d-27.6315781!4d-48.6706916!15sChRQRVQgc0hPUCBlbSBQQUxIT8OHQVoWIhRwZXQgc2hvcCBlbSBwYWxob8OnYZIBCXBldF9zdG9yZZoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VOc2ExOWhRbEZCRUFF4AEA-gEECAAQQw!16s%2Fg%2F11bw_5s0br?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D"
+Hospital Veterinário Vetmax 24h - Palhoça,"
+(48) 3242-9987","
+R. Ten. Francisco Lehmkhul, 112 - Centro, Palhoça - SC, 88130-040",https://vetmaxclinica24h.com.br/,https://www.instagram.com/hospitalvetmax/,"https://www.google.com/maps/place/Hospital+Veterin%C3%A1rio+Vetmax+24h+-+Palho%C3%A7a/@-27.6259531,-48.7125206,14z/data=!4m10!1m2!2m1!1sPET+sHOP+em+PALHO%C3%87A!3m6!1s0x952735ba11cb7d87:0xcbc0e334f9982a3!8m2!3d-27.641134!4d-48.6647189!15sChRQRVQgc0hPUCBlbSBQQUxIT8OHQVoWIhRwZXQgc2hvcCBlbSBwYWxob8OnYZIBD2FuaW1hbF9ob3NwaXRhbJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VOcWVsbERORnAzRUFF4AEA-gEECAAQOg!16s%2Fg%2F11c1v0ycrf?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D"

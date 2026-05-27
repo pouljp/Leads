@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resultados</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <header class="bg-blue-600 text-white p-6 shadow-md">
+    <h1 class="text-3xl font-bold text-center">Resultados</h1>
+    <p class="text-center mt-2">Lista de empresas do setor pet em Palhoça</p>
+  </header>
+
+  <main class="p-6 max-w-6xl mx-auto">
+    <input id="search" type="text" placeholder="Buscar empresa..." class="mb-6 w-full p-3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+    
+    <div id="results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Empresas serão inseridas aqui via JS -->
+    </div>
+  </main>
+
+  <script>
+    // Função para carregar o CSV
+    async function loadCSV() {
+      try {
+        const response = await fetch('./data/empresas.csv'); 
+        const text = await response.text();
+        const lines = text.split('\n').filter(line => line.trim() !== '');
+        const empresas = [];
+
+        for (let i = 1; i < lines.length; i++) {
+      // Remove caracteres estranhos e quebras de linha
+      const cleanLine = lines[i].replace(/[\r\n]/g, '').trim();
+      if (!cleanLine) continue;
+
+      const row = cleanLine.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
+      if (!row || row.length < 6) continue; // garante que tenha todas as colunas
+
+      empresas.push({
+        nome: (row[0] || '').replace(/"/g, '').trim(),
+        telefone: (row[1] || '').replace(/"/g, '').trim(),
+        endereco: (row[2] || '').replace(/"/g, '').trim(),
+        site: (row[3] || '').replace(/"/g, '').trim(),
+        instagram: (row[4] || '').replace(/"/g, '').trim(),
+        maps: (row[5] || '').replace(/"/g, '').trim()
+      });
+    }
+
+    return empresas;
+
+  } catch (err) {
+    console.error("Erro ao carregar o CSV:", err);
+    return [];
+  }
+}
+
+
+    function displayEmpresas(empresas) {
+      const container = document.getElementById('results');
+      container.innerHTML = '';
+      empresas.forEach(emp => {
+        container.innerHTML += `
+          <div class="bg-white rounded-xl shadow-md p-5 hover:shadow-xl transition">
+            <h2 class="text-xl font-bold mb-2 text-blue-700">${emp.nome}</h2>
+            <p class="flex items-center mb-1"><span class="material-icons text-gray-500 mr-2">phone</span> ${emp.telefone}</p>
+            <p class="flex items-center mb-1"><span class="material-icons text-gray-500 mr-2">location_on</span> ${emp.endereco}</p>
+            ${emp.site ? `<p class="flex items-center mb-1"><span class="material-icons text-gray-500 mr-2">language</span> <a href="${emp.site}" target="_blank" class="text-blue-600 hover:underline">Site</a></p>` : ''}
+            ${emp.instagram ? `<p class="flex items-center mb-1"><span class="material-icons text-pink-500 mr-2">camera_alt</span> <a href="${emp.instagram}" target="_blank" class="text-pink-500 hover:underline">Instagram</a></p>` : ''}
+            <p class="flex items-center"><span class="material-icons text-green-600 mr-2">map</span> <a href="${emp.maps}" target="_blank" class="text-green-600 hover:underline">Ver no Maps</a></p>
+          </div>
+        `;
+      });
+    }
+
+    // Carrega e exibe empresas
+    loadCSV().then(empresas => {
+      displayEmpresas(empresas);
+
+      const searchInput = document.getElementById('search');
+      searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase();
+        const filtered = empresas.filter(emp => emp.nome.toLowerCase().includes(query));
+        displayEmpresas(filtered);
+      });
+    });
+  </script>
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</body>
+</html>

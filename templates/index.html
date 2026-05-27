@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Leads Google Maps</title>
+
+<style>
+body { font-family: Arial; margin: 30px; }
+table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+th, td { border: 1px solid #ccc; padding: 6px; }
+th { background: #eee; }
+button { padding: 6px 10px; cursor: pointer; }
+.section { margin-top: 35px; }
+.badge { background: #ddd; padding: 3px 6px; border-radius: 4px; }
+</style>
+
+</head>
+<body>
+
+<h2>🔍 Buscar Leads no Google Maps</h2>
+
+<form method="POST" action="/">
+    <input name="atividade" placeholder="Ex: mercado" required>
+    <input name="cidade" placeholder="Ex: São José" required>
+    <button type="submit">Buscar</button>
+</form>
+
+{% if empresas %}
+<div class="section">
+<h3>📊 Resultados — <span class="badge">{{ empresas|length }}</span></h3>
+
+<a href="/exportar/{{ chave_atual }}">
+    <button>📥 Exportar CSV</button>
+</a>
+<a href="/completar/{{ chave_atual }}">
+    <button>🚀 Busca Completa</button>
+</a>
+
+<table>
+<tr>
+  <th>Nome</th>
+  <th>Telefone</th>
+  <th>Endereço</th>
+  <th>Site</th>
+  <th>CNPJ</th>
+  <th>Instagram</th>
+  <th>Maps</th>
+</tr>
+
+{% for e in empresas %}
+<tr>
+  <td>{{ e.nome }}</td>
+  <td>{{ e.telefone }}</td>
+  <td>{{ e.endereco }}</td>
+  <td>
+    {% if e.site and e.site.startswith("http") %}
+    <a href="{{ e.site }}" target="_blank">Site</a>
+    {% else %}
+    {{ e.site }}
+    {% endif %}
+  </td>
+  <td>{{ e.cnpj }}</td>
+  <td>
+    {% if e.instagram %}
+      <a href="{{ e.instagram }}" target="_blank">Instagram</a>
+    {% endif %}
+  </td>
+  <td><a href="{{ e.maps }}" target="_blank">Maps</a></td>
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endif %}
+
+{% if historico %}
+<div class="section">
+<h3>📜 Histórico de Buscas</h3>
+
+<table>
+<tr>
+  <th>Busca</th>
+  <th>Total</th>
+  <th>Ações</th>
+</tr>
+
+{% for chave, lista in historico.items() %}
+<tr>
+  <td>{{ chave }}</td>
+  <td>{{ lista|length }}</td>
+  <td>
+    <a href="/ver/{{ chave }}">👁 Ver</a> |
+    <a href="/exportar/{{ chave }}">📥 Exportar</a>
+  </td>
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endif %}
+
+</body>
+</html>
