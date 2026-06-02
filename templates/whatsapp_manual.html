@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Disparo Manual e por Planilha</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f0f2f5; }
+        .box { background: white; padding: 30px; border-radius: 8px; max-width: 700px; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        h2 { color: #075E54; margin-top: 0; border-bottom: 2px solid #eaebec; padding-bottom: 10px; }
+        textarea { width: 100%; padding: 12px; font-size: 14px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; resize: vertical; background: #fafafa; }
+        textarea:focus { border-color: #25D366; outline: none; background: white; }
+        .btn-send { background-color: #25D366; color: white; font-weight: bold; font-size: 16px; border: none; padding: 12px; width: 100%; border-radius: 6px; cursor: pointer; margin-top: 20px; }
+        .btn-send:hover { background-color: #128C7E; }
+        .alert { display: none; background-color: #fff3cd; color: #856404; padding: 15px; border-radius: 6px; border: 1px solid #ffeeba; margin-top: 15px; font-size: 14px; line-height: 1.4; }
+        label { font-weight: bold; display: block; margin-top: 15px; margin-bottom: 5px; color: #444; }
+        .btn-voltar { display: inline-block; margin-bottom: 15px; color: #007bff; text-decoration: none; font-weight: bold; }
+        .file-box { border: 2px dashed #cbd5e0; padding: 20px; text-align: center; border-radius: 8px; background: #fafafa; margin-top: 5px; }
+        .file-box:hover { border-color: #25D366; background: #f0fdf4; }
+        .divider { text-align: center; margin: 20px 0; font-weight: bold; color: #888; border-bottom: 1px solid #eee; line-height: 0.1em; }
+        .divider span { background:#fff; padding:0 10px; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <a href="/" class="btn-voltar">⬅️ Voltar para a Busca</a>
+    <h2>✍️ Disparo por Planilha ou Lista Manual</h2>
+    <p style="color: #666; font-size: 14px;">Você pode importar uma planilha pronta de leads ou digitar os números diretamente.</p>
+
+    <form id="manualForm" action="/whatsapp/disparar_manual" method="POST" enctype="multipart/form-data">
+        <label for="mensagem">Texto Base da Mensagem (Salva Automaticamente):</label>
+        <textarea id="mensagem" name="mensagem" style="height: 180px;" oninput="autoSalvar()">{{ mensagem }}</textarea>
+        
+        <label for="file">Opção 1: Importar Planilha (.xlsx, .xls, .csv):</label>
+        <div class="file-box">
+            <input type="file" id="file" name="file" accept=".xlsx, .xls, .csv">
+        </div>
+        <small style="color: #888; display: block; margin-top: 4px;">Sua planilha precisa ter as colunas com o título: <strong>nome</strong> e <strong>telefone</strong>.</small>
+
+        <div class="divider"><span>OU</span></div>
+
+        <label for="contatos">Opção 2: Digitar ou Colar Contatos (Um por linha):</label>
+        <textarea id="contatos" name="contatos" style="height: 110px;" placeholder="Exemplos:&#10;João, (11) 99999-9999&#10;48988887777"></textarea>
+
+        <button type="submit" class="btn-send">🚀 Iniciar Sequência de Envios</button>
+    </form>
+
+    <div id="aviso" class="alert">
+        <strong>⚠️ SISTEMA EM EXECUÇÃO:</strong> O robô abrirá o WhatsApp Web no navegador padrão. 
+        <strong>Não mexa no mouse ou teclado</strong> até que o processo termine no terminal.
+    </div>
+</div>
+
+<script>
+    function autoSalvar() {
+        const txt = document.getElementById('mensagem').value;
+        fetch('/salvar_mensagem', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ mensagem: txt })
+        });
+    }
+
+    document.getElementById('manualForm').onsubmit = function() {
+        document.getElementById('aviso').style.display = 'block';
+    };
+</script>
+
+</body>
+</html>
