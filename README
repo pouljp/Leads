@@ -1,35 +1,46 @@
-# Sistema de Geração de Leads - Google Maps
+# Sistema de Geração de Leads - Google Maps & Disparador WhatsApp
 
-Sistema desenvolvido para automatizar a coleta de informações comerciais através do Google Maps.
+Sistema desenvolvido para automatizar a coleta de informações comerciais através do Google Maps e realizar a gestão e o disparo de mensagens automatizadas para prospecção via WhatsApp.
 
-A aplicação realiza buscas por empresas com base em palavras-chave e localização, extraindo dados relevantes para prospecção comercial e geração de leads.
+A aplicação realiza buscas por empresas com base em palavras-chave e localização, extrai dados relevantes para prospecção comercial e permite iniciar campanhas de contato direto de forma humanizada e ágil.
 
-## Funcionalidades
+## 🚀 Novas Funcionalidades Adicionadas
+
+- **Disparo Automatizado Integrado:** Envie mensagens no WhatsApp para os leads de qualquer busca direto pelo histórico do sistema.
+- **Disparo por Planilha Manual:** Importe arquivos externos em Excel (`.xlsx`, `.xls`) ou `.csv` contendo listas de contatos para disparar em massa.
+- **Inserção Manual Expressa:** Caixa de texto inteligente para colar listas rápidas de contatos no formato `Nome, Telefone` ou apenas o número puro.
+- **Salvamento em Tempo Real:** O texto da sua mensagem de abordagem é salvo automaticamente em um banco de dados local (`config.json`) enquanto você digita na tela.
+- **Simulação de Ritmo Humano (Anti-Bloqueio):** O sistema utiliza o teclado físico da máquina para disparar e fecha abas antigas de forma cadenciada, respeitando intervalos de segurança estratégicos para proteger seu número.
+
+## 📋 Funcionalidades Gerais
 
 - Busca automatizada no Google Maps
 - Coleta de nome da empresa
 - Categoria/atividade da empresa
 - Website
-- Instagram
-- E-mail
-- Telefone
-- Endereço
-- CNPJ
-- Exportação dos dados
-- Interface web para gerenciamento das buscas
+- Redes Sociais (Instagram)
+- E-mail e CNPJ (Enriquecimento de dados)
+- Telefone e Endereço
+- Exportação dos dados limpos e formatados para Excel
+- Histórico de buscas salvas para reutilização de leads
+- Interface web completa, amigável e intuitiva para gerenciamento das buscas e campanhas
 
-## Objetivo
+## 🎯 Objetivo
 
-O sistema foi criado para otimizar processos de prospecção comercial, facilitando a identificação de potenciais clientes de forma automatizada e organizada.
+O sistema foi criado para otimizar ponta a ponta os processos de prospecção comercial (Outbound), facilitando desde a descoberta inteligente de potenciais clientes de forma automatizada até o primeiro contato de vendas.
 
-## Tecnologias utilizadas
+## 🛠️ Tecnologias Utilizadas
 
-- Python
-- Selenium
-- Flask
-- HTML/CSS
-- Google Maps Scraping
+- **Python** (Backend e inteligência do sistema)
+- **Flask** (Servidor web local)
+- **Selenium** (Automação de scraping no Google Maps)
+- **PyAutoGUI** (Automação de interface física e simulação de teclado para o WhatsApp Web)
+- **Pandas & OpenPyXL** (Tratamento de dados, leitura e exportação de planilhas)
+- **HTML5 / CSS3 / JavaScript (Tailwind CSS)** (Interface gráfica do usuário)
 
-## Observações
+## 📦 Como Instalar as Dependências
 
-O projeto utiliza automação web para coleta pública de informações disponíveis online.
+Antes de rodar o projeto, certifique-se de atualizar seus pacotes dentro do ambiente virtual (`venv`):
+
+```bash
+pip install flask pandas openpyxl pyautogui xlsxwriter selenium
